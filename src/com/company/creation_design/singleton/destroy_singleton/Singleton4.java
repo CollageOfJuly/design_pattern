@@ -20,12 +20,12 @@ public class Singleton4 implements Serializable {
      * 静态内部类加载单例模式
      * 静态内部类只有其成员被调用时，才会被类加载器加载，符合单例实例化
      */
-    private static class Singleton5Holder {
+    private static class Singleton4Holder {
         private static final Singleton4 INSTANCE = new Singleton4();
     }
 
     public static Singleton4 getInstance() {
-        return Singleton5Holder.INSTANCE;
+        return Singleton4Holder.INSTANCE;
     }
 
     /**
@@ -33,6 +33,6 @@ public class Singleton4 implements Serializable {
      * @return 单例对象
      */
     private Object readResolve() {
-        return Singleton5Holder.INSTANCE;
+        return Singleton4Holder.INSTANCE;
     }
 }
